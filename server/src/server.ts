@@ -24,7 +24,7 @@ const uri: string =
 })();
 
 app.get('/health', (_req: Request, res: Response) => {
-    res.status(200).send('Server is running');
+    res.status(200).send({serverStatus: 'UP'});
 });
 
 const PORT: string | number = process.env.PORT || 3000;
